@@ -1,0 +1,80 @@
+@media (max-width: $mobileBreakpoint) {
+  .layout-wrapper {
+    .layout-sidebar {
+      left: -270px;
+      width: 270px;
+      height: 100%;
+      top: 0;
+      -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      @include transition(left $transitionDuration);
+      @include shadow(0 2px 10px 0 rgba(0, 0, 0, 0.3));
+    }
+
+    .layout-main {
+      margin-left: 0;
+      left: 0;
+      @include transition(left $transitionDuration);
+      -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      .layout-content {
+        width: 100%;
+      }
+    }
+
+    .layout-topbar {
+      width: 100%;
+
+      .menu-btn {
+        display: inline-block;
+        margin-right: 14px;
+      }
+
+      .topbar-left-memu {
+        display: none;
+      }
+    }
+
+    &.layout-mobile-active {
+      overflow: hidden;
+
+      .layout-sidebar {
+        left: 0;
+      }
+
+      .layout-main {
+        position: fixed;
+        .layout-content {
+          .ui-scrollpanel-bar {
+            display: none;
+          }
+        }
+      }
+
+      .layout-main-mask {
+        z-index: 999998;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $contentMobileMaskBgColor;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include opacity(0.5);
+      }
+    }
+  }
+
+  .layout-topbar-menu-wrapper {
+    .img-flag {
+      display: none;
+    }
+  }
+
+  body {
+    &.hidden-overflow {
+      overflow: hidden;
+    }
+  }
+}

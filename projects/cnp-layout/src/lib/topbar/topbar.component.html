@@ -1,0 +1,37 @@
+<div class="layout-topbar">
+    <button mat-button class="menu-btn" (click)="onMenuButtonClick($event)">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="topbar-left-memu">
+        <button *ngFor="let item of leftMenu" mat-button class="left-menu-item" [routerLink]="item.routerLink" (click)="leftMenuClick($event,item)">
+            <img *ngIf="item.img" src="{{item.img}}" alt="IMG" height="38">
+            {{item.label | uppercase}}
+        </button>
+    </div>
+
+    <div class="layout-topbar-menu-wrapper">
+
+        <button *ngIf="langMenu" mat-button [matMenuTriggerFor]="actionLang" class="right-menu-item">
+            <img src="{{langMenu.currentImg}}" alt="LG" width="30" height="20" class="img-flag">
+            {{langMenu.currentLang}}
+            <mat-icon>arrow_drop_down</mat-icon>
+            <mat-menu #actionLang="matMenu">
+                <button mat-menu-item *ngFor="let item of langMenu.langItems" [routerLink]="item.routerLink"
+                    (click)="rightMenuClick($event,item)">
+                    <img src="{{item.img}}" alt="IMG" width="35" height="25">
+                    {{item.label}}
+                </button>
+            </mat-menu>
+        </button>
+
+        <button *ngIf="userMenu" mat-button [matMenuTriggerFor]="actions" class="right-menu-item">
+            {{userMenu.welcome + ' ' + username}}
+            <mat-icon>{{userMenu.icon}}</mat-icon>
+            <mat-menu #actions="matMenu">
+                <button mat-menu-item *ngFor="let item of userMenu.menuItems" [routerLink]="item.routerLink"
+                    (click)="rightMenuClick($event,item)">{{item.label}}</button>
+            </mat-menu>
+        </button>
+    </div>
+</div>

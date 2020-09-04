@@ -1,0 +1,21 @@
+{
+  "name": "cnp-layout",
+  "version": "0.0.1",
+  "description": "A simple layout use angular material",
+  "author": {"name": "truongnh"},
+  "repository": {"type": "git", "url": "https://github.com/htcnp/cnp-lib.git"},
+  "bugs": {"url": "https://github.com/htcnp/cnp-lib/issues"},
+  "homepage": "https://github.com/htcnp/cnp-lib",
+  "license": "MIT",
+  "keywords": [
+    "cnp"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^10.1.0",
+    "@angular/core": "^10.1.0",
+    "@angular/material": "^10.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

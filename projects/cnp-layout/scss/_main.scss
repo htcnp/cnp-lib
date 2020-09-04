@@ -1,0 +1,29 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $textColor;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background-color: $bodyBgColor;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}

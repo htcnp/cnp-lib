@@ -1,0 +1,271 @@
+.layout-topbar {
+  width: 100%;
+  height: 64px;
+  background-color: $topbarBgColor;
+  padding: 14px 24px;
+  position: fixed;
+  z-index: 999;
+  @include transition(width $transitionDuration);
+  @include shadow(0 1px 10px 0 rgba(182, 183, 195, 0.5));
+
+  .menu-btn {
+    margin-right: 16px;
+    color: $topbarItemColor;
+    padding: 0;
+    min-width: auto;
+    width: 64px;
+    height: 64px;
+    left: -24px;
+    top: -14px;
+    border-radius: unset;
+    @include transition(all $transitionDuration);
+
+    &:hover {
+      color: $topbarItemHoverColor;
+    }
+  }
+
+  .topbar-left-memu {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    .left-menu-item {
+      color: $topbarItemColor;
+      font-weight: bold;
+    }
+  }
+
+  .layout-topbar-menu-wrapper {
+    float: right;
+    .right-menu-item {
+      color: $topbarItemColor;
+    }
+  }
+}
+.layout-wrapper {
+  .layout-main {
+    @include transition(margin-left $transitionDuration);
+    .layout-content {
+      position: fixed;
+      top: 64px;
+      bottom: 0;
+    }
+    .view-scroll-content {
+      overflow: auto;
+      height: 100%;
+    }
+    .layout-main-mask {
+      display: none;
+    }
+  }
+  .layout-sidebar {
+    position: fixed;
+    z-index: 999;
+    background: $lightSidebarBgColor;
+    .sidebar-scroll-content {
+      overflow: auto;
+      height: calc(100% - 64px);
+    }
+    .layout-sidebar-logo {
+      height: 64px;
+      @include background-gradient-left2right(
+        $sidebarTopStartBgColor,
+        $sidebarTopEndBgColor
+      );
+      @include clearfix();
+
+      img {
+        float: right;
+        height: 45px;
+        margin-top: 10px;
+        margin-right: 45px;
+      }
+
+      .layout-sidebar-anchor {
+        font-size: 24px;
+        color: $sidebarAnchorColor;
+        display: none;
+
+        i {
+          @include icon_override("\f10c");
+        }
+      }
+    }
+
+    .layout-menu {
+      list-style-type: none;
+      margin: 16px 0 0 0;
+      padding: 0;
+      .mat-icon {
+        float: right;
+        font-size: 20px;
+        margin-top: 7px;
+      }
+      > li {
+        > a {
+          &:hover {
+            background-color: $lightSidebarMenuitemHoverBgColor;
+          }
+        }
+
+        > ul {
+          border-left: 4px solid transparent;
+        }
+
+        &.active-menuitem {
+          > a {
+            color: $menuitemActiveColor;
+            padding-left: 12px;
+            border-left: 4px solid $sidebarTopStartBgColor;
+
+            &:hover {
+              background-color: $lightSidebarMenuitemHoverBgColor;
+              background-color: $menuitemHoverBgColor;
+            }
+
+            i:first-child {
+              color: $rootMenuitemActiveIconColor;
+              background-color: $menuitemActiveColor;
+            }
+          }
+
+          > ul {
+            border-left-width: 4px;
+            border-left-style: solid;
+            @include border-gradient-top2bottom(
+              $sidebarTopStartBgColor,
+              $sidebarTopEndBgColor
+            );
+          }
+        }
+      }
+
+      li {
+        width: 100%;
+
+        > a {
+          color: $lightSidebarMenuitemTextColor;
+          display: block;
+          padding: 4px 16px;
+          @include transition(background-color $transitionDuration);
+          @include clearfix();
+
+          i:first-child {
+            color: $lightSidebarMenuitemTextColor;
+            background-color: $lightSidebarMenuitemIconBgColor;
+            float: left;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 18px;
+            text-align: center;
+            margin-right: 10px;
+          }
+
+          .layout-submenu-toggler {
+            float: right;
+            font-size: 18px;
+            margin-right: 12px;
+            margin-top: 9px;
+            @include transition(all $transitionDuration);
+          }
+
+          span {
+            margin-top: 6px;
+            display: inline-block;
+          }
+        }
+
+        &.active-menuitem {
+          background-color: $lightSidebarActiveMenuitemBgColor;
+
+          > a {
+            color: $menuitemActiveColor;
+
+            .layout-submenu-toggler {
+              @include rotate(90deg);
+            }
+
+            i:first-child {
+              color: $rootMenuitemActiveIconColor;
+              background-color: $menuitemActiveColor;
+            }
+
+            &:hover {
+              background-color: $lightSidebarMenuitemHoverBgColor;
+            }
+          }
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: $lightSidebarSubmenuBgColor;
+
+          li {
+            > a:hover {
+              background-color: $lightSidebarSubmenuitemHoverBgColor;
+            }
+
+            a {
+              padding-left: 32px;
+            }
+
+            li {
+              a {
+                padding-left: 48px;
+              }
+
+              li {
+                a {
+                  padding-left: 64px;
+                }
+
+                li {
+                  a {
+                    padding-left: 80px;
+                  }
+
+                  li {
+                    a {
+                      padding-left: 96px;
+                    }
+
+                    li {
+                      a {
+                        padding-left: 110px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .layout-rightpanel {
+    position: fixed;
+    top: 64px;
+    height: 100%;
+    right: -240px;
+    width: 240px;
+    z-index: 999;
+    background-color: $rightPanelBgColor;
+    @include transition(right $transitionDuration);
+    @include shadow(0 2px 10px 0 rgba(0, 0, 0, 0.3));
+
+    &.layout-rightpanel-active {
+      right: 0;
+      -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .layout-rightpanel-content {
+      padding: 14px;
+    }
+  }
+}

@@ -2,5 +2,86 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "cnp-layout": {
+      "projectType": "library",
+      "root": "projects/cnp-layout",
+      "sourceRoot": "projects/cnp-layout/src",
+      "prefix": "cnp",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/cnp-layout/tsconfig.lib.json",
+            "project": "projects/cnp-layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cnp-layout/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cnp-layout/src/test.ts",
+            "tsConfig": "projects/cnp-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/cnp-layout/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cnp-layout/tsconfig.lib.json",
+              "projects/cnp-layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "cnp-dialog": {
+      "projectType": "library",
+      "root": "projects/cnp-dialog",
+      "sourceRoot": "projects/cnp-dialog/src",
+      "prefix": "cnp",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/cnp-dialog/tsconfig.lib.json",
+            "project": "projects/cnp-dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cnp-dialog/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cnp-dialog/src/test.ts",
+            "tsConfig": "projects/cnp-dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/cnp-dialog/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cnp-dialog/tsconfig.lib.json",
+              "projects/cnp-dialog/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "cnp-layout"
 }

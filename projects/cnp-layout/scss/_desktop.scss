@@ -1,0 +1,217 @@
+@media (min-width: $mobileBreakpoint + 1) {
+  .layout-wrapper {
+    &.layout-static {
+      .layout-sidebar {
+        left: 0;
+        width: 270px;
+        height: 100%;
+        top: 0;
+        -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+        transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+        @include transition(left $transitionDuration);
+        @include shadow(0 2px 10px 0 rgba(0, 0, 0, 0.3));
+      }
+
+      .layout-main {
+        margin-left: 270px;
+
+        .layout-topbar,
+        .layout-content {
+          width: calc(100% - 270px);
+
+          .menu-btn {
+            display: inline-block;
+          }
+        }
+      }
+
+      &.layout-static-inactive {
+        .layout-sidebar {
+          left: -270px;
+        }
+
+        .layout-main {
+          margin-left: 0;
+
+          .layout-topbar,
+          .layout-content {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &.layout-horizontal {
+      .layout-sidebar {
+        width: 100%;
+        height: auto;
+        top: 64px;
+        left: 0;
+        z-index: 998;
+        @include shadow(0 1px 10px 0 rgba(182, 183, 195, 0.5));
+
+        .layout-sidebar-logo {
+          display: none;
+        }
+
+        .layout-menu {
+          margin: 0;
+
+          > li {
+            display: inline-block;
+            width: auto;
+
+            > a {
+              height: 44px;
+              display: inline-block;
+
+              i:first-child {
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 14px;
+                margin-top: 6px;
+              }
+
+              span {
+                margin-right: 6px;
+              }
+
+              .layout-submenu-toggler {
+                margin-right: 0;
+              }
+
+              .menuitem-badge {
+                margin-right: 0;
+              }
+            }
+
+            > ul {
+              position: absolute;
+              min-width: 200px;
+              @include overlay-shadow();
+            }
+          }
+
+          li {
+            ul {
+              li {
+                a {
+                  padding-left: 16px;
+                }
+
+                li {
+                  a {
+                    padding-left: 32px;
+                  }
+
+                  li {
+                    a {
+                      padding-left: 48px;
+                    }
+
+                    li {
+                      a {
+                        padding-left: 64px;
+                      }
+
+                      li {
+                        a {
+                          padding-left: 80px;
+                        }
+
+                        li {
+                          a {
+                            padding-left: 96px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .layout-main {
+        .layout-topbar {
+          width: 100%;
+          @include shadow(none);
+          @include background-gradient-left2right(
+            $sidebarTopStartBgColor,
+            $sidebarTopEndBgColor
+          );
+
+          .menu-btn {
+            display: none;
+          }
+
+          .topbar-search {
+            input {
+              color: $horizontalLayoutTopbarTextColor;
+              border-bottom: 1px solid $horizontalLayoutTopbarTextColor;
+            }
+
+            i {
+              color: $horizontalLayoutTopbarTextColor;
+            }
+          }
+
+          .layout-topbar-menu-wrapper {
+            .topbar-menu {
+              > li {
+                > a {
+                  color: $horizontalLayoutTopbarTextColor;
+
+                  i,
+                  .topbar-item-name {
+                    color: $horizontalLayoutTopbarTextColor;
+
+                    &:hover {
+                      color: $horizontalLayoutTopbarTextHoverColor;
+                    }
+                  }
+                }
+
+                &.active-topmenuitem {
+                  > a {
+                    i {
+                      color: $horizontalLayoutTopbarTextHoverColor;
+                    }
+                  }
+
+                  > ul {
+                    display: block;
+                  }
+                }
+              }
+            }
+
+            .rightpanel-btn {
+              i {
+                color: $horizontalLayoutTopbarTextColor;
+
+                &:hover {
+                  color: $horizontalLayoutTopbarTextHoverColor;
+                }
+              }
+
+              &.rightpanel-btn-active {
+                i {
+                  @include rotate(180deg);
+                  color: $horizontalLayoutTopbarTextHoverColor;
+                }
+              }
+            }
+          }
+        }
+
+        .layout-content {
+          width: 100%;
+          padding-top: 44px;
+        }
+      }
+    }
+  }
+}
