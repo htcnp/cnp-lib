@@ -6,6 +6,7 @@
   },
   "assets": [
     "./scss/*",
+    "./variables.scss",
     "./layout.scss"
   ]
 }
