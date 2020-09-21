@@ -1,5 +1,5 @@
 <div class="layout-topbar">
-    <button mat-button class="menu-btn" (click)="onMenuButtonClick($event)">
+    <button *ngIf="isShowMenuButton" mat-button class="menu-btn" (click)="onMenuButtonClick($event)">
         <mat-icon>menu</mat-icon>
     </button>
 

@@ -40,10 +40,10 @@ export class MenuComponent {
 
   constructor() { }
 
-  itemClick(event: Event, item: any, index: number) {
+  itemClick(event: Event, item: any, index: number): void {
     if (item.disabled) {
       event.preventDefault();
-      return true;
+      return;
     }
     // activate current item and deactivate active sibling if any
     this.activeIndex = (this.activeIndex === index) ? null : index;

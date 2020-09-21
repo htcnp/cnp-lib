@@ -12,19 +12,20 @@ export class TopbarComponent {
   @Input() langMenu: TopBarLangMenu;
   @Input() userMenu: TopBarUserMenu;
   @Input() username = '';
+  @Input() isShowMenuButton: boolean;
   @Output() doToggleMenu: EventEmitter<any> = new EventEmitter();
 
-  onMenuButtonClick(evt) {
+  onMenuButtonClick(evt): void {
     this.doToggleMenu.emit(evt);
   }
 
-  rightMenuClick(event: Event, item: TopBarMenuItem) {
+  rightMenuClick(event: Event, item: TopBarMenuItem): void {
     if (item.command) {
       item.command({ originalEvent: event, item });
     }
   }
 
-  leftMenuClick(event: Event, item: TopBarMenuItem) {
+  leftMenuClick(event: Event, item: TopBarMenuItem): void {
     if (item.command) {
       item.command({ originalEvent: event, item });
     }
