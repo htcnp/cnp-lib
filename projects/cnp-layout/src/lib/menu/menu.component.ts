@@ -31,7 +31,7 @@ import { MenuItem } from '../model/menu-item';
 })
 export class MenuComponent {
 
-  @Input() item: MenuItem;
+  @Input() item: MenuItem[];
   @Input() root: boolean;
   @Input() visible: boolean;
   @Output() hideMenu: EventEmitter<any> = new EventEmitter();
@@ -40,7 +40,7 @@ export class MenuComponent {
 
   constructor() { }
 
-  itemClick(event: Event, item: any, index: number): void {
+  itemClick(event: Event, item: MenuItem, index: number): void {
     if (item.disabled) {
       event.preventDefault();
       return;

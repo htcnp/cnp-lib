@@ -142,23 +142,14 @@
             $sidebarTopStartBgColor,
             $sidebarTopEndBgColor
           );
-
           .menu-btn {
             display: none;
           }
 
-          .topbar-search {
-            input {
-              color: $horizontalLayoutTopbarTextColor;
-              border-bottom: 1px solid $horizontalLayoutTopbarTextColor;
-            }
-
-            i {
-              color: $horizontalLayoutTopbarTextColor;
-            }
-          }
-
           .layout-topbar-menu-wrapper {
+            .right-menu-item {
+              color: #FFFFFF;
+            }
             .topbar-menu {
               > li {
                 > a {
@@ -184,23 +175,6 @@
                   > ul {
                     display: block;
                   }
-                }
-              }
-            }
-
-            .rightpanel-btn {
-              i {
-                color: $horizontalLayoutTopbarTextColor;
-
-                &:hover {
-                  color: $horizontalLayoutTopbarTextHoverColor;
-                }
-              }
-
-              &.rightpanel-btn-active {
-                i {
-                  @include rotate(180deg);
-                  color: $horizontalLayoutTopbarTextHoverColor;
                 }
               }
             }
