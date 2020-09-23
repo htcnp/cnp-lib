@@ -31,14 +31,14 @@ import { MenuItem } from '../model/menu-item';
 })
 export class MenuComponent {
 
-  @Input() item: MenuItem[];
+  @Input() item: any;
   @Input() root: boolean;
   @Input() visible: boolean;
   @Output() hideMenu: EventEmitter<any> = new EventEmitter();
   isParentActive: boolean;
   activeIndex: number;
 
-  constructor() { }
+  constructor() {}
 
   itemClick(event: Event, item: MenuItem, index: number): void {
     if (item.disabled) {

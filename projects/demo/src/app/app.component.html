@@ -1,0 +1,36 @@
+<div class="layout-wrapper layout-static"
+    [ngClass]="{'layout-mobile-active': staticMenuMobileActive,'layout-static-inactive': staticMenuDesktopInactive}"
+    (click)="onLayoutClick()">
+    <div class="layout-main">
+        <cnp-topbar
+            [langMenu]="langMenu"
+            [leftMenu]="leftMenu"
+            [userMenu]="userMenu"
+            [username]="userLogged"
+            [isShowMenuButton]="isShowMenuButton"
+            (doToggleMenu)=onMenuButtonClick($event)>
+        </cnp-topbar>
+        <div class="layout-content">
+            <div class="view-scroll-content">
+                <div class="view-container">
+                    Hello&nbsp;
+                    <button mat-stroked-button color="primary" (click)="showDialogNofication()">Click me nofication</button>&nbsp;
+                    <button mat-stroked-button color="accent" (click)="showDialogConfirm()">Click me confirm</button>&nbsp;
+                    <button mat-stroked-button color="warn" (click)="showDialogError()">Click me error</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-sidebar" (click)="onLeftPanelClick()">
+        <div class="layout-sidebar-logo"></div>
+        <div class="layout-menu-container">
+            <ul cnp-menu class="layout-menu"
+                [item]="featuresMenu"
+                root="true"
+                visible="true"
+                parentActive="true"
+                (hideMenu)="doHideMenuStatic()">
+            </ul>
+        </div>
+    </div>
+</div>

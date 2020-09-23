@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build cnp-layout && ng build cnp-dialog"
   },
   "private": true,
   "dependencies": {
