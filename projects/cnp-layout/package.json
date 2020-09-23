@@ -1,6 +1,6 @@
 {
   "name": "cnp-layout",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "description": "A simple layout use angular material",
   "author": {"name": "truongnh"},
   "repository": {"type": "git", "url": "https://github.com/htcnp/cnp-lib.git"},

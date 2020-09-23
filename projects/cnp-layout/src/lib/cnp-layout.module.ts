@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { MenuComponent } from './menu/menu.component';
@@ -18,8 +16,6 @@ import { TopbarComponent } from './topbar/topbar.component';
     RouterModule,
     MatIconModule,
     MatButtonModule,
-    MatSelectModule,
-    MatTooltipModule,
     MatMenuModule
   ],
   exports: [MenuComponent, TopbarComponent]
