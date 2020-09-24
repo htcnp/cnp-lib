@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatRippleModule } from '@angular/material/core';
 
 import { MenuComponent } from './menu/menu.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -16,7 +17,8 @@ import { TopbarComponent } from './topbar/topbar.component';
     RouterModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatRippleModule
   ],
   exports: [MenuComponent, TopbarComponent]
 })
