@@ -7,10 +7,10 @@ export class MenuItem {
     items?: MenuItem[] | MenuItem[][];
     disabled?: boolean;
     target?: string;
-    badge?: string;
+    // badge?: string;
     styleClass?: string;
     title?: string;
-    id?: string;
+    // id?: string;
     tabindex?: string;
 }
 

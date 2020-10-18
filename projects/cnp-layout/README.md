@@ -22,3 +22,25 @@ Run `ng test cnp-layout` to execute the unit tests via [Karma](https://karma-run
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Demo
+
+github.com/htcnp/cnp-lib
+
+## I/O menu 
+```ts
+@Input() item: any; // use MenuItem[]
+@Input() root: boolean;
+@Input() visible: boolean;
+@Output() hideMenu: EventEmitter<any> = new EventEmitter();
+```
+
+## I/O topbar 
+```ts
+@Input() leftMenu: TopBarMenuItem[] = [];
+@Input() langMenu: TopBarLangMenu;
+@Input() userMenu: TopBarUserMenu;
+@Input() username = '';
+@Input() isShowMenuButton: boolean;
+@Output() doToggleMenu: EventEmitter<any> = new EventEmitter();
+```

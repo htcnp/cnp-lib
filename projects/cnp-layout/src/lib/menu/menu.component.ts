@@ -31,7 +31,7 @@ import { MenuItem } from '../model/menu-item';
 })
 export class MenuComponent {
 
-  @Input() item: any;
+  @Input() item: any; // use MenuItem[]
   @Input() root: boolean;
   @Input() visible: boolean;
   @Output() hideMenu: EventEmitter<any> = new EventEmitter();
