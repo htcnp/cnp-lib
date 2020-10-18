@@ -1,30 +1,13 @@
 $fontFamily:"Roboto";
 $fontSize:14px;
 $textColor:#333333;
-$textSecondaryColor:lighten($textColor,25%);
-$borderRadius:2px;
-$dividerColor:#d8dae2;
 $transitionDuration:.3s;
-
-$primaryColor: #3D72B4;
-$blue:#147df0;
-$pink:#ed3c76;
-$green:#3e9018;
-$red:#da2f31;
-$orange:#ffb200;
-$teal:#599597;
-$purple:#633ea5;
-$black:#000000;
-$yellow:#ffd644;
-$silver: #f7f7f7;
 // common
 $sidebarTopStartBgColor:#074999;
 $sidebarTopEndBgColor:#4e81be;
 $sidebarAnchorColor:#ffffff;
 $menuitemActiveColor:#3D72B4;
 $rootMenuitemActiveIconColor:#ffffff;
-$menuitemBadgeBgColor:#7f7f7f;
-$menuitemBadgeTextColor:#ffffff;
 $horizontalLayoutTopbarTextColor:#ffffff;
 $horizontalLayoutTopbarTextHoverColor:#BDD0E7;
 // topbar
@@ -32,27 +15,44 @@ $bodyBgColor:#f4f3f8;
 $topbarBgColor:#ffffff;
 $topbarItemColor:#5b5b5b;
 $topbarItemHoverColor:#7f8087;
-$topbarItemActiveColor:#48494d;
-$topbarInputBorderColor:#d8dae2;
-$topbarSubmenuHoverBgColor:#f1f2f7;
-$topbarMobileMenuBgColor:#ffffff;
-// dark sidebar - default
-$sidebarBgColor:#2c2d3c;
-$menuitemIconBgColor:#1d1d26;
-$menuitemTextColor:#d9dae3;
 $menuitemHoverBgColor:#1d1d26;
-$submenuitemHoverBgColor:#242430;
-$activeMenuitemBgColor:#17171e;
-$submenuBgColor:#17171e;
 // light sidebar
-$lightSidebarBgColor:#f2f2f7;
-$lightSidebarMenuitemIconBgColor:#d9d9de;
-$lightSidebarMenuitemTextColor:#575867;
-$lightSidebarMenuitemHoverBgColor:#d9d9de;
-$lightSidebarSubmenuitemHoverBgColor:#d9d9de;
-$lightSidebarActiveMenuitemBgColor:#ffffff;
-$lightSidebarSubmenuBgColor:#ffffff;
+$sidebarBgColor:#f2f2f7;
+$sidebarMenuitemIconBgColor:#d9d9de;
+$sidebarMenuitemTextColor:#575867;
+$sidebarMenuitemHoverBgColor:#d9d9de;
+$sidebarSubmenuitemHoverBgColor:#d9d9de;
+$sidebarActiveMenuitemBgColor:#ffffff;
+$sidebarSubmenuBgColor:#ffffff;
 // misc
-$rightPanelBgColor:#ffffff;
 $mobileBreakpoint:767px;
 $contentMobileMaskBgColor:#ffffff;
+
+// $textSecondaryColor:lighten($textColor,25%);
+// $borderRadius:2px;
+// $dividerColor:#d8dae2;
+// $primaryColor: #3D72B4;
+// $blue:#147df0;
+// $pink:#ed3c76;
+// $green:#3e9018;
+// $red:#da2f31;
+// $orange:#ffb200;
+// $teal:#599597;
+// $purple:#633ea5;
+// $black:#000000;
+// $yellow:#ffd644;
+// $silver: #f7f7f7;
+// $menuitemBadgeBgColor:#7f7f7f;
+// $menuitemBadgeTextColor:#ffffff;
+// $topbarItemActiveColor:#48494d;
+// $topbarInputBorderColor:#d8dae2;
+// $topbarSubmenuHoverBgColor:#f1f2f7;
+// $topbarMobileMenuBgColor:#ffffff;
+// dark sidebar - default
+// $sidebarBgColor:#2c2d3c;
+// $menuitemIconBgColor:#1d1d26;
+// $menuitemTextColor:#d9dae3;
+// $submenuitemHoverBgColor:#242430;
+// $activeMenuitemBgColor:#17171e;
+// $submenuBgColor:#17171e;
+// $rightPanelBgColor:#ffffff;

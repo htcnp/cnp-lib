@@ -23,10 +23,10 @@ export class AppComponent {
     ]
   };
   userMenu: TopBarUserMenu = {
-    welcome: 'Xin chào',
+    welcome: 'Hi',
     icon: 'arrow_drop_down',
     menuItems: [
-      { label: 'Đăng xuất', command: _ => this.doLogout() }
+      { label: 'Logout', command: _ => this.doLogout() }
     ]
   };
   // left menu
@@ -34,11 +34,11 @@ export class AppComponent {
   leftMenu: TopBarMenuItem[];
   // features menu
   featuresMenu: MenuItem[] = [
-    { label: 'Trang chủ', icon: 'home', routerLink: '/', items: undefined },
+    { label: 'Home', icon: 'home', routerLink: '/', items: undefined },
     {
-      label: 'Quản lý hệ thống', icon: 'settings', routerLink: '/', items: [
-        { label: 'Danh mục', icon: 'list', routerLink: '/system/category' },
-        { label: 'Nhà cung cấp', icon: 'connect_without_contact', routerLink: '/system/provicer' }
+      label: 'System manager', icon: 'settings', routerLink: '/', items: [
+        { label: 'Category', icon: 'list', routerLink: '/category' },
+        { label: 'Provicer', icon: 'connect_without_contact', routerLink: '/provicer' }
       ]
     }
   ];
@@ -121,10 +121,10 @@ export class AppComponent {
   }
 
   isMobile(): boolean {
-    return window.innerWidth < 768;
+    return window.innerWidth < 768; // set equal mobileBreakpoint  + 1 in scss
   }
 
   isDesktop(): boolean {
-    return window.innerWidth >= 768;
+    return window.innerWidth >= 768; // set equal mobileBreakpoint  + 1 in scss
   }
 }

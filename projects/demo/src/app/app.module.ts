@@ -5,19 +5,35 @@ import { AppComponent } from './app.component';
 import { CnpLayoutModule } from 'cnp-layout';
 import { CnpDialogModule } from 'projects/cnp-dialog/src/public-api';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { CategoryComponent } from './category/category.component';
+import { ProvicerComponent } from './provicer/provicer.component';
+
+
+const routes: Routes = [
+  {
+    path: 'category',
+    component: CategoryComponent
+  },
+  {
+    path: 'provicer',
+    component: ProvicerComponent
+  }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CategoryComponent,
+    ProvicerComponent
   ],
   imports: [
     BrowserAnimationsModule,
     CommonModule,
     CnpLayoutModule,
     CnpDialogModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot(routes),
     MatButtonModule
   ],
   providers: [],

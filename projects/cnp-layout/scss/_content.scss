@@ -61,7 +61,7 @@
   .layout-sidebar {
     position: fixed;
     z-index: 999;
-    background: $lightSidebarBgColor;
+    background: $sidebarBgColor;
     .sidebar-scroll-content {
       overflow: auto;
       height: calc(100% - 64px);
@@ -104,7 +104,7 @@
       > li {
         > a {
           &:hover {
-            background-color: $lightSidebarMenuitemHoverBgColor;
+            background-color: $sidebarMenuitemHoverBgColor;
           }
         }
 
@@ -119,7 +119,7 @@
             border-left: 4px solid $sidebarTopStartBgColor;
 
             &:hover {
-              background-color: $lightSidebarMenuitemHoverBgColor;
+              background-color: $sidebarMenuitemHoverBgColor;
               background-color: $menuitemHoverBgColor;
             }
 
@@ -144,15 +144,15 @@
         width: 100%;
 
         > a {
-          color: $lightSidebarMenuitemTextColor;
+          color: $sidebarMenuitemTextColor;
           display: block;
           padding: 4px 16px;
           @include transition(background-color $transitionDuration);
           @include clearfix();
 
           i:first-child {
-            color: $lightSidebarMenuitemTextColor;
-            background-color: $lightSidebarMenuitemIconBgColor;
+            color: $sidebarMenuitemTextColor;
+            background-color: $sidebarMenuitemIconBgColor;
             float: left;
             width: 36px;
             height: 36px;
@@ -177,7 +177,7 @@
         }
 
         &.active-menuitem {
-          background-color: $lightSidebarActiveMenuitemBgColor;
+          background-color: $sidebarActiveMenuitemBgColor;
 
           > a {
             color: $menuitemActiveColor;
@@ -192,7 +192,7 @@
             }
 
             &:hover {
-              background-color: $lightSidebarMenuitemHoverBgColor;
+              background-color: $sidebarMenuitemHoverBgColor;
             }
           }
         }
@@ -202,11 +202,11 @@
           margin: 0;
           padding: 0;
           overflow: hidden;
-          background-color: $lightSidebarSubmenuBgColor;
+          background-color: $sidebarSubmenuBgColor;
 
           li {
             > a:hover {
-              background-color: $lightSidebarSubmenuitemHoverBgColor;
+              background-color: $sidebarSubmenuitemHoverBgColor;
             }
 
             a {
