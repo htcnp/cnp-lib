@@ -33,7 +33,7 @@ const routes: Routes = [
     CommonModule,
     CnpLayoutModule,
     CnpDialogModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     MatButtonModule
   ],
   providers: [],
